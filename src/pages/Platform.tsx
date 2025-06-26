@@ -16,9 +16,9 @@ const Platform: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#060220] text-[#f5f4f5] font-sans">
       <Header />
-      <main className="flex flex-col items-center py-12 px-4">
+      <main className="flex flex-col items-center py-12 px-4 pt-28">
         <div>
-          <h1 className="text-3xl tracking-wider mx-10 font-normal">
+          <h1 className="text-4xl tracking-wider mx-10 font-normal sticky top-[60px] sm:top-[80px] bg-[#060220] z-40 text-center py-4">
             NRSAA PLATFORM
           </h1>
 
@@ -31,7 +31,7 @@ const Platform: React.FC = () => {
               muted
               playsInline
               onEnded={() => setVideoEnded(true)}
-              className={`w-full max-w-[1200px] ml-auto mr-auto px-4 transition-opacity duration-[800ms] ${
+              className={`w-full max-w-[1100px] ml-auto mr-auto px-4 transition-opacity duration-[800ms] ${
                 videoEnded ? "opacity-0 pointer-events-none" : "opacity-100"
               }`}
             />
@@ -40,7 +40,7 @@ const Platform: React.FC = () => {
             <img
               src={device_photo}
               alt="Device"
-              className={`max-w-[300px] md:max-w-[900px] w-full h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#f5f4f5] transition-opacity duration-700 ${
+              className={`max-w-[300px] md:max-w-[650px] w-full h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#f5f4f5] transition-opacity duration-700 ${
                 videoEnded ? "opacity-100" : "opacity-0"
               }`}
             />

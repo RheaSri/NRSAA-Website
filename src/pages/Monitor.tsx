@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import outputVideo1 from '../assets/vitalsmonitoring.webm';
 import outputVideo2 from '../assets/device_video1.webm';
-import device_photo from '../assets/nrsaa_mockup_new.png';
+import device_photo from '../assets/web_light.png';
+import outputVideo3 from '../assets/mobility.webm';
 
 const uses = [
   { label: "Vital Tracking", src: outputVideo1 },
   { label: "Wireless Transmission", src: outputVideo2 },
-  { label: "Patient Mobility", src: outputVideo1 },
+  { label: "Patient Mobility", src: outputVideo3 },
 ];
 
 const Monitor: React.FC = () => {
@@ -17,9 +18,9 @@ const Monitor: React.FC = () => {
     <div className="min-h-screen bg-[#060220] text-[#f5f4f5] font-sans">
       <Header />
 
-      <main className="flex flex-col items-center py-12 px-4">
+      <main className="flex flex-col items-center py-12 px-4 pt-28">
         <div>
-          <h1 className="text-3xl tracking-wider mx-10 font-normal">
+          <h1 className="text-4xl tracking-wider mx-10 font-normal sticky top-[60px] sm:top-[80px] bg-[#060220] z-40 text-center py-4">
             NRSAA MONITOR
           </h1>
 
@@ -32,7 +33,7 @@ const Monitor: React.FC = () => {
               muted
               playsInline
               onEnded={() => setVideoEnded(true)}
-              className={`w-full max-w-[1200px] ml-auto mr-auto px-4 xl:mr-[450px] transition-opacity duration-[800ms] ${
+              className={`w-full max-w-[1200px] ml-auto mr-auto px-4 xl:mr-[350px] transition-opacity duration-[800ms] ${
                 videoEnded ? "opacity-0 pointer-events-none" : "opacity-100"
               }`}
             />
